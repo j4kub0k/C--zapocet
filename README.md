@@ -69,7 +69,7 @@ nebol dokončený zaverečný boss kvôli tomu že sa mi nepodarilo implementova
 tak aby fungoval aj cez prechadzanie medzi scenami
 
 ## Zaver
-    S počiatku som sa bál že bude tažke splniť 45KiB cistého kódu a preto som sa snažil nafuknuť počet mechanik v hre,
+S počiatku som sa bál že bude tažke splniť 45KiB cistého kódu a preto som sa snažil nafuknuť počet mechanik v hre,
 čo bola ku koncu podľa mnňa chyba keďže som sa nesustredil na to aby bola hra vyvážená a ako sa hrá ale iba na to aby to 
 tam bolo, tiež som sa moc nesustredil na ich implementaciu až tak do hĺbky ako by som mohol a nepremýšlal som moc nad tým ako
 s čim bude komunikavať. 
