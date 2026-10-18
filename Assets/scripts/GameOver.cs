@@ -10,6 +10,9 @@ public class GameOver : MonoBehaviour
 {
     public GameObject gameOver;
     
+    /// <summary>
+    /// Shows the game over screen.
+    /// </summary>
     void Start()
     {
         gameObject.SetActive(true);

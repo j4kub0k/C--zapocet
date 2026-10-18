@@ -20,6 +20,9 @@ public class invincible : MonoBehaviour
         player.GetComponent<PlayerKill>().ChangeInvincible();
         Destroy(gameObject);
     }
+    /// <summary>
+    /// Makes the player invincible and starts the countdown.
+    /// </summary>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")

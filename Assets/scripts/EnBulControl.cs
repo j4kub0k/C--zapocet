@@ -9,6 +9,9 @@ public class EnBulControl : MonoBehaviour
 {
     public float speed;
     public AudioClip missSound;
+    /// <summary>
+    /// Destroys the bullet.
+    /// </summary>
     private void Die()
     {
         Destroy(gameObject);
@@ -38,6 +41,9 @@ public class EnBulControl : MonoBehaviour
 
         //Destroy(gameObject);
     }
+    /// <summary>
+    /// Launches the bullet forward.
+    /// </summary>
     void Start()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * speed, ForceMode.Impulse);

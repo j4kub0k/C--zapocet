@@ -8,6 +8,9 @@ using UnityEngine.UI;
 /// </summary>
 public class Damage_Boost : MonoBehaviour
 {
+    /// <summary>
+    /// Reverts the doubled damage of the given gun after 5 seconds.
+    /// </summary>
     private IEnumerator SetBack(GameObject player , controller.gunType gun)
     {
         yield return new WaitForSeconds(5);
@@ -25,6 +28,9 @@ public class Damage_Boost : MonoBehaviour
                 break;
         }
     }
+    /// <summary>
+    /// Doubles the damage of the gun the player currently holds and starts the revert timer.
+    /// </summary>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")

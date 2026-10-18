@@ -11,6 +11,9 @@ public class flickering : MonoBehaviour
     bool change=true;
     bool active = true;
     private Light _light;
+    /// <summary>
+    /// Caches the light component.
+    /// </summary>
     void Start()
     {
         _light = GetComponent<Light>();
@@ -26,6 +29,9 @@ public class flickering : MonoBehaviour
         Debug.Log(active.ToString());
         Debug.Log(change.ToString());
     }
+    /// <summary>
+    /// Schedules the next flicker every two seconds.
+    /// </summary>
     void Update()
     {
         if (change)

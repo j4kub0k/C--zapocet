@@ -8,6 +8,9 @@ using UnityEngine.UI;
 /// </summary>
 public class infinit_ammo : MonoBehaviour
 {
+    /// <summary>
+    /// Hides the pickup and turns infinite ammo off again after 10 seconds.
+    /// </summary>
     IEnumerator CountDown(GameObject player, Text text)
     {
         gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -17,6 +20,9 @@ public class infinit_ammo : MonoBehaviour
         player.GetComponent<controller>().ChangeInfinit();
         Destroy(gameObject);
     }
+    /// <summary>
+    /// Turns on infinite ammo for the player.
+    /// </summary>
     private void OnCollisionEnter(Collision collision)
     {
 

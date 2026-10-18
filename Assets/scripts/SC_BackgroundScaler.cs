@@ -12,6 +12,9 @@ public class SC_BackgroundScaler : MonoBehaviour
     float ratio;
 
     
+    /// <summary>
+    /// Computes the aspect ratio of the background sprite.
+    /// </summary>
     void Start()
     {
         backgroundImage = GetComponent<Image>();
@@ -19,6 +22,9 @@ public class SC_BackgroundScaler : MonoBehaviour
         ratio = backgroundImage.sprite.bounds.size.x / backgroundImage.sprite.bounds.size.y;
     }
 
+    /// <summary>
+    /// Resizes the image so it always covers the screen.
+    /// </summary>
     void Update()
     {
         if (!rt)

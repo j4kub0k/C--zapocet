@@ -8,12 +8,18 @@ public class EnemyCount : MonoBehaviour
 
     public Canvas canvas;
     public Light dir;
+    /// <summary>
+    /// Unused; kept for Unity's component lifecycle.
+    /// </summary>
     void Start()
     {
         
     }
 
     // Update is called once per frame
+    /// <summary>
+    /// Activates the win UI and light once the enemy container has no children left.
+    /// </summary>
     void Update()
     {
         if(this.transform.childCount == 0)

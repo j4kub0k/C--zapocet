@@ -15,6 +15,9 @@ public class controller : MonoBehaviour
     public GameObject gun;
     public int MaxHealth = 3;
     private bool infinit = false;
+    /// <summary>
+    /// Available weapons.
+    /// </summary>
     public enum gunType { pistol, machinegun, shotgun};
     gunType currentGun = gunType.pistol;
     bool canShoot = true;
@@ -40,6 +43,9 @@ public class controller : MonoBehaviour
             GetComponent<PlayerKill>().ChangeHealth(MaxHealth);
         }
     }
+    /// <summary>
+    /// Returns the currently equipped gun.
+    /// </summary>
     public gunType GetCurrentGun()=> currentGun;
 
     /// <summary>
@@ -66,6 +72,9 @@ public class controller : MonoBehaviour
     /// </summary>
     public void RestoreHealth()=>
         GetComponent<PlayerKill>().ChangeHealth(MaxHealth);
+    /// <summary>
+    /// Toggles infinite ammo.
+    /// </summary>
     public void ChangeInfinit()
     {
         infinit = !infinit;
@@ -106,6 +115,9 @@ public class controller : MonoBehaviour
 
     }
    
+    /// <summary>
+    /// Loads the save (if any) and resets tweens.
+    /// </summary>
     void Start()
     {
         character = GetComponent<CharacterController>();
@@ -115,6 +127,9 @@ public class controller : MonoBehaviour
     }
 
     
+    /// <summary>
+    /// Handles movement, shooting and rotation each frame.
+    /// </summary>
     void Update()
     {
         Move();

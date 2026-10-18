@@ -9,6 +9,9 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
 
+    /// <summary>
+    /// Target of the enemy (the player).
+    /// </summary>
     public Transform target; // the enemy's target
     public float within_range; // range to attack player
     public float speed; //speed of enemy
@@ -27,6 +30,9 @@ public class Attack : MonoBehaviour
         audioSource_.clip = enemyWalk;
         audioSource_.Play();
     }
+    /// <summary>
+    /// Chases the player while he is in range and visible; otherwise lets <see cref="Patrol"/> resume.
+    /// </summary>
     public void Update()
     {
         //get the distance between the player and enemy (this object)
@@ -73,6 +79,9 @@ public class Attack : MonoBehaviour
 
         }
     }
+    /// <summary>
+    /// Caches the patrol and audio components.
+    /// </summary>
     private void Start()
     {
         patrol = GetComponent<Patrol>();

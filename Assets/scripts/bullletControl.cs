@@ -60,11 +60,20 @@ public class bullletControl : MonoBehaviour
 
         //Destroy(gameObject);
     }
+    /// <summary>
+    /// Sets the damage dealt on hit.
+    /// </summary>
     public void SetDamage(int d)
     {
         damage = d;
     }
+    /// <summary>
+    /// Returns the damage dealt on hit.
+    /// </summary>
     public int GetDamage()=>damage;
+    /// <summary>
+    /// Launches the bullet forward.
+    /// </summary>
     void Start()
     {
         //moves the bullet forward with a force of speed
