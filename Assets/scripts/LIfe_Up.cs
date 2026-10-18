@@ -8,6 +8,9 @@ using UnityEngine;
 /// </summary>
 public class LIfe_Up : MonoBehaviour
 {
+    /// <summary>
+    /// Raises the player's max health and fully heals him.
+    /// </summary>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")

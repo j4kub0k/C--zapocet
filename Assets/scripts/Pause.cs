@@ -7,8 +7,14 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class Pause : MonoBehaviour
 {
+    /// <summary>
+    /// The player object controlled and saved by the menu.
+    /// </summary>
     public GameObject player;
     private GameObject canvas;
+    /// <summary>
+    /// Hides the pause menu at the start of the scene.
+    /// </summary>
     void Start()
     {
         canvas=transform.GetChild(0).gameObject;
@@ -16,6 +22,9 @@ public class Pause : MonoBehaviour
     }
    
 
+    /// <summary>
+    /// Hides the pause menu, shows the HUD and gives control back to the player.
+    /// </summary>
     private void Go()
     {
         canvas.SetActive(false);
@@ -75,6 +84,9 @@ public class Pause : MonoBehaviour
         player.GetComponent<controller>().enabled = true;
         Camera.main.DOKill();
     }
+   /// <summary>
+   /// Toggles the pause menu on the Escape key and freezes time while paused.
+   /// </summary>
    private void Update()
     {
         //checking if the player pressed the escape key to pause the game

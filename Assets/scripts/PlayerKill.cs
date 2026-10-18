@@ -10,6 +10,9 @@ public class PlayerKill : MonoBehaviour
 {
     private int health = 3;
     private bool invincible=false;
+    /// <summary>
+    /// Takes damage from enemies and enemy bullets, unless invincible.
+    /// </summary>
     private void OnTriggerEnter(Collider other)
     {
        
@@ -56,14 +59,29 @@ public class PlayerKill : MonoBehaviour
         save.Delete();
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
+     /// <summary>
+     /// Returns the current health.
+     /// </summary>
      public int GetHealth()=>health;
+    /// <summary>
+    /// Adds <paramref name="x"/> to the current health.
+    /// </summary>
     public void SetHealth(int x)=>health+=x;
     
+    /// <summary>
+    /// Sets the health to exactly <paramref name="x"/>.
+    /// </summary>
     public void ChangeHealth(int x)=>health=x;
+    /// <summary>
+    /// Starts with full health.
+    /// </summary>
     public void Start()
     {
         health= GetComponent<controller>().MaxHealth;
     }
+    /// <summary>
+    /// Toggles invincibility (used by the invincibility power-up).
+    /// </summary>
     public void ChangeInvincible()=>invincible=!invincible;
 
 }

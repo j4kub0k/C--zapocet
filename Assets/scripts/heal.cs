@@ -7,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class heal : MonoBehaviour
 {
+    /// <summary>
+    /// Heals the player by one point and consumes the pickup.
+    /// </summary>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")

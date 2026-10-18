@@ -17,6 +17,9 @@ public class RangeAttack : MonoBehaviour
     public int Damage = 1;
 
 
+    /// <summary>
+    /// Re-enables shooting after the cooldown.
+    /// </summary>
     private void Shoot()
     {
         
@@ -80,6 +83,9 @@ public class RangeAttack : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Caches the patrol component.
+    /// </summary>
     private void Start()
     {
         canShoot= true;

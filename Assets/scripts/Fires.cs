@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Fires bullets from a weapon's fire point and shows the muzzle flash.
+/// </summary>
 public class Fires : MonoBehaviour
 {
 

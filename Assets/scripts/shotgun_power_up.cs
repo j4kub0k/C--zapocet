@@ -8,6 +8,9 @@ using UnityEngine.UI;
 /// </summary>
 public class shotgun_power_up : MonoBehaviour
 {
+    /// <summary>
+    /// Gives the player the shotgun and consumes the pickup.
+    /// </summary>
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")

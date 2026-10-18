@@ -30,6 +30,9 @@ public class Patrol : MonoBehaviour
         puff = true;
     }
 
+    /// <summary>
+    /// Moves the enemy along the waypoints according to the <c>loop</c> and <c>back_forth</c> settings.
+    /// </summary>
     void Update()
     {
         if (index == wayPoint.Count && !(back_forth || loop))

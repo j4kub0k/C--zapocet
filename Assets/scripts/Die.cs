@@ -11,6 +11,9 @@ public class Die : MonoBehaviour
    public GameObject particle;
     public int maxHealth = 2;
 
+    /// <summary>
+    /// Re-enables the enemy's <see cref="Attack"/> script after being hit.
+    /// </summary>
     private void enable()=> this.GetComponent<Attack>().enabled = true;
 
     /// <summary>
@@ -56,6 +59,9 @@ public class Die : MonoBehaviour
             die();
         }
     }
+    /// <summary>
+    /// Finds the player in the scene.
+    /// </summary>
     public void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");

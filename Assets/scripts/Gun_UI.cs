@@ -10,12 +10,18 @@ public class Gun_UI : MonoBehaviour
 {
     private Transform text;
     private GameObject Player;
+    /// <summary>
+    /// Caches the player reference and the text transform.
+    /// </summary>
     void Start()
     {
         Player = GetComponentInParent<Pause>().player;
         text = this.GetComponent<Transform>();
     }
 
+    /// <summary>
+    /// Shows the current gun name and keeps the label next to the player.
+    /// </summary>
     void Update()
     {
         GetComponent<Text>().text = Player.GetComponent<controller>().GetCurrentGun().ToString();

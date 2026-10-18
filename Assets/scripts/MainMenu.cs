@@ -6,7 +6,13 @@ using UnityEngine;
 /// </summary>
 public class MainMenu : MonoBehaviour
 {
+    /// <summary>
+    /// Root object of the menu UI.
+    /// </summary>
     public GameObject mainMenu;
+    /// <summary>
+    /// Shows the menu.
+    /// </summary>
     void Start()
     {
         mainMenu.SetActive(true);
@@ -27,6 +33,9 @@ public class MainMenu : MonoBehaviour
         if(System.IO.Directory.Exists(save.path))
             UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
     }
+    /// <summary>
+    /// Quits the application.
+    /// </summary>
     public void QuitButton()
     {
         // Quit Game

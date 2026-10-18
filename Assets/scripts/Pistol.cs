@@ -13,6 +13,9 @@ public class Pistol : MonoBehaviour
     private int currentAmmo; 
     public int Damage = 1;
 
+    /// <summary>
+    /// Returns the current ammo count.
+    /// </summary>
     public int GetAmmo()
     {
         return currentAmmo;
@@ -47,6 +50,9 @@ public class Pistol : MonoBehaviour
             transform.parent.GetComponent<AudioSource>().Play();
     }
 
+    /// <summary>
+    /// Adds ammo, capped at <c>MaxAmmo</c>.
+    /// </summary>
     public void AddAmmo(int ammo)
     {
         int x = currentAmmo + ammo;
@@ -56,11 +62,17 @@ public class Pistol : MonoBehaviour
             currentAmmo = MaxAmmo;
 
     }
+    /// <summary>
+    /// Sets the ammo count directly (used when loading a save).
+    /// </summary>
     public void SetAmmo(int ammo)
     {
         currentAmmo = ammo;
     }
 
+    /// <summary>
+    /// Fills the magazine.
+    /// </summary>
     public void Start()
     {
         currentAmmo = MaxAmmo;

@@ -9,6 +9,9 @@ using UnityEngine;
 public class Machinegun_power_up : MonoBehaviour
 {
     
+    /// <summary>
+    /// Gives the player the machine gun and consumes the pickup.
+    /// </summary>
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
